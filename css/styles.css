@@ -46,14 +46,8 @@ img {
   width: 1px;
 }
 
-.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-
 .container {
-  max-width: 335px;
+  max-width: 375px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -61,13 +55,13 @@ img {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 704px;
+    max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1166px) {
   .container {
     max-width: 1166px;
     padding-left: 15px;
@@ -103,7 +97,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1158px) {
+@media screen and (min-width: 1166px) {
   .header {
     padding-bottom: 32px;
   }
@@ -117,14 +111,26 @@ img {
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
-  margin-right: 90px;
+  margin-right: auto;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header-nav {
+    margin-right: 48px;
+  }
+}
+
+@media screen and (min-width: 1166px) {
+  .header-nav {
+    margin-right: 90px;
+  }
 }
 
 .header-logo {
   font-weight: 700;
-  font-size: 18px;
-  line-height: 1.11;
+  font-size: 14px;
+  line-height: 1.29;
   letter-spacing: -0.03em;
   color: #111;
   display: flex;
@@ -132,13 +138,27 @@ img {
   gap: 4px;
 }
 
+@media screen and (min-width: 1166px) {
+  .header-logo {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.11;
+  }
+}
+
 .header-logo-italic {
   font-style: italic;
 }
 
 .header-menu-list {
-  display: flex;
-  gap: 24px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu-list {
+    display: flex;
+    gap: 24px;
+  }
 }
 
 .header-menu-link {
@@ -155,8 +175,20 @@ img {
 }
 
 .header-soc-list {
-  display: flex;
-  gap: 14px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-soc-list {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1166px) {
+  .header-soc-list {
+    gap: 14px;
+  }
 }
 
 .header-soc-img:hover, .header-soc-img:focus {
@@ -167,6 +199,29 @@ img {
   stroke-width: 1.50px;
   fill: #111;
   transition: fill 300ms linear;
+}
+
+.header-menu-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu-btn {
+    display: none;
+  }
+}
+
+.header-menu-icon {
+  fill: transparent;
+  stroke-width: 2px;
+  stroke: #111;
 }
 
 /* -------------------- */
@@ -189,6 +244,12 @@ img {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .mobile-menu-top {
@@ -230,7 +291,7 @@ img {
 .mobile-item-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14286;
+  line-height: 1.14;
   letter-spacing: -0.02em;
   color: #fff;
 }
@@ -1069,6 +1130,12 @@ img {
   opacity: 0;
   pointer-events: none;
   transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .modal {
