@@ -986,6 +986,13 @@ img {
   flex-shrink: 0;
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .made-list-item::before {
+    background-image: url(../images/ellipse@2x.png);
+  }
+}
+
 .made-list-item:last-child {
   margin-bottom: 0;
 }
