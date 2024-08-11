@@ -80,16 +80,16 @@
             </a>
           </li>
         </ul>
-        <button class="header-menu-btn" type="button">
+        <button class="header-menu-btn" type="button" data-menu-open>
           <svg class="header-menu-icon" width="24" height="16">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
 
-      <div class="mobile-menu">
+      <div class="mobile-menu" data-menu>
         <div class="mobile-menu-top">
-          <button class="mobile-close-btn" type="button">
+          <button class="mobile-close-btn" type="button" data-menu-close>
             <svg class="mobile-close-icon" width="14" height="14">
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
@@ -941,7 +941,9 @@
               </li>
             </div>
           </ul>
-          <button class="loved-btn" type="button">Leave a review</button>
+          <button class="loved-btn" type="button" data-modal-open>
+            Leave a review
+          </button>
         </div>
       </section>
     </main>
@@ -1045,9 +1047,9 @@
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-btn">
+        <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="16" height="16">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -1132,5 +1134,7 @@
         </form>
       </div>
     </div>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
